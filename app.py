@@ -1,28 +1,9 @@
 import streamlit as st
-import pafy as p
+import os
 
-
-class video_info():
-
-    def __init__(self,link):
-        video_info.get_title(link)
-        video_info.get_transcript(link)
-
-    def get_title(link):
-        print(2)
-        pass
-       
-
-    def get_transcript(link):
-        print(3)
-        pass
-
-
-
-
-
-
-
+from video_info import GetVideo
+from model import Model
+from prompt import Prompt
 
 
 
@@ -41,11 +22,26 @@ def Homepage():
     youtube_url = st.text_input("Enter YouTube Video Link")
 
     if youtube_url:
-        video_id = youtube_url.split("=")[1]
+        video_title = GetVideo.title(youtube_url)
+        video_transcript = GetVideo.transcript(youtube_url)
+        video_id = GetVideo.Id(youtube_url)
+        st.write(video_title)
         st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_column_width=True)
 
     if st.button("Get summary"):
-        pass
+        summary = Model.google_gemini(video_transcript,prompt)
+        st.markdown("## Summary :")
+        st.write(summary)
 
 
 Homepage()
+
+
+
+
+
+
+
+
+
+
