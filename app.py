@@ -1,6 +1,8 @@
+#Imports
 import streamlit as st
 import os
 
+#Local imports
 from video_info import GetVideo
 from model import Model
 from prompt import Prompt
@@ -9,9 +11,6 @@ from prompt import Prompt
 
 #Prompt for video
 prompt01 = Prompt.prompt1()
-
-
-
 
 def Homepage():
     st.title("AI Video Summarizer")
@@ -26,9 +25,9 @@ def Homepage():
         st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_column_width=True)
 
     if st.button("Get summary"):
-        #summary = Model.google_gemini(video_transcript,prompt01)
+        summary = Model.google_gemini(video_transcript,prompt01)
         st.markdown("## Summary :")
-        st.write("summary")
+        st.write(summary)
 
 
 Homepage()
