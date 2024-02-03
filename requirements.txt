@@ -2,3 +2,4 @@ streamlit
 youtube_transcript_api
 google-generativeai
 pafy
+dotenv
