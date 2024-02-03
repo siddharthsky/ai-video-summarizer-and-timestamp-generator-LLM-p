@@ -1,5 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi 
-import pafy
+from bs4 import BeautifulSoup
+import requests
 
 
 class GetVideo():
@@ -7,8 +8,10 @@ class GetVideo():
         pass
 
     def title(link):
-        video = pafy.new(link)
-        return video
+        r = requests.get(link) 
+        s = BeautifulSoup(r.text, "html.parser") 
+        title = s.find("meta", itemprop="name")["content"]
+        return title
         
     def transcript(link):
         video_id = link.split("=")[1]
@@ -17,3 +20,4 @@ class GetVideo():
         for i in transcript_dict:
             final_transcript += " " + i["text"]
         return final_transcript
+    
