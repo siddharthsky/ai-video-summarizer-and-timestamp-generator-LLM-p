@@ -1,6 +1,4 @@
 streamlit
 google-generativeai
 youtube_transcript_api
-youtube-dl
-pafy
 dotenv
