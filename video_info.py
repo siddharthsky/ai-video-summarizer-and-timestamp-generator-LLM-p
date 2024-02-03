@@ -1,17 +1,17 @@
-
 from youtube_transcript_api import YouTubeTranscriptApi 
 import pafy
-class GetVideo():
 
+
+
+class GetVideo():
     def __init__(self):
         pass
 
-    def get_title(link):
-        print(2)
-        pass
-       
-
-    def get_transcript(link):
+    def title(link):
+        video = pafy.new(link)
+        return video
+        
+    def transcript(link):
         video_id = link.split("=")[1]
         transcript_dict=YouTubeTranscriptApi.get_transcript(video_id)
         final_transcript = ""
@@ -20,7 +20,4 @@ class GetVideo():
         return final_transcript
 
 
-
-
-s1 = GetVideo.get_title("de")
-
+s1=GetVideo.transcript("https://www.youtube.com/watch?v=GuErWFsHSzM")
