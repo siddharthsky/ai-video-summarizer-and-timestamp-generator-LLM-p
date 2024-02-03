@@ -2,3 +2,4 @@ streamlit
 google-generativeai
 youtube_transcript_api
 dotenv
+beautifulsoup4
