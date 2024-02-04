@@ -60,7 +60,15 @@ git clone https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p
 ```
 cd google-gemini-yt-video-summarizer-AI-p
 ```
-3. Run the summarizer:
+3. Install dependencies:
+```
+pip install -r requirements.txt
+```
+4. Create a .env file and add [Google Gemini API key](https://makersuite.google.com/app/apikey) to that file
+```
+GOOGLE_GEMINI_API_KEY = "Your-Key-Here"
+```
+5. Run the summarizer:
 ```
 streamlit run app.py
 ```
