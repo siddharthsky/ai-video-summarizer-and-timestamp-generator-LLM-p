@@ -26,7 +26,12 @@
   <a href="#contributing">Contributing</a> 
 </p>
 
-![screenshot](https://i.imgur.com/jTzu4cN.gif)
+<p align="center">
+  <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p"><img src="https://raw.githubusercontent.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/main/research/demo.gif" ></a>
+</p>
+
+
+
 
 ## Overview
 
