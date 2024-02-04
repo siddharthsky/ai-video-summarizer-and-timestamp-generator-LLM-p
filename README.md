@@ -64,7 +64,7 @@ cd google-gemini-yt-video-summarizer-AI-p
 ```
 pip install -r requirements.txt
 ```
-4. Create a .env file and add [Google Gemini API key](https://makersuite.google.com/app/apikey) to that file
+4. Create a ".env" file and add [Google Gemini API key](https://makersuite.google.com/app/apikey) to that file
 ```
 GOOGLE_GEMINI_API_KEY = "Your-Key-Here"
 ```
