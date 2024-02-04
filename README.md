@@ -23,8 +23,7 @@
   <a href="#overview">Overview</a> •
   <a href="#features">Features</a> •
   <a href="#getting-started">Getting Started</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a>
+  <a href="#contributing">Contributing</a> 
 </p>
 
 ![screenshot](https://i.imgur.com/aR9KzlW.jpeg)
@@ -48,9 +47,18 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 
 ### Usage
 
-1. Clone the repository: `git clone https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p.git`
-2. Navigate to the project directory: `cd google-gemini-yt-video-summarizer-AI-p`
-3. Run the summarizer: `streamlit run app.py`
+1. Clone the repository:
+```
+git clone https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p.git
+```
+2. Navigate to the project directory:
+```
+cd google-gemini-yt-video-summarizer-AI-p
+```
+3. Run the summarizer:
+```
+streamlit run app.py
+```
 
 ## Contributing
 
@@ -58,9 +66,5 @@ Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for m
 
 ## Acknowledgments
 
-- Special thanks to [Google Gemini API](https://example.com/gemini-api) for providing powerful video analysis capabilities.
-
-## Contact
-
-For any inquiries, please contact [Siddharth Kamble](https://github.com/siddharthsky).
-
+- [Google Gemini API](https://example.com/gemini-api) 
+- [Krish Naik](https://www.youtube.com/user/krishnaik06) 
