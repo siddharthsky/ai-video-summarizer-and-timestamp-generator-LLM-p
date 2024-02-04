@@ -26,7 +26,7 @@
   <a href="#contributing">Contributing</a> 
 </p>
 
-![screenshot](https://i.imgur.com/aR9KzlW.jpeg)
+![screenshot](https://i.imgur.com/jTzu4cN.gif)
 
 ## Overview
 
