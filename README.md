@@ -43,24 +43,18 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.10
 - Install required dependencies: `pip install -r requirements.txt`
 
 ### Usage
 
 1. Clone the repository: `git clone https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p.git`
 2. Navigate to the project directory: `cd google-gemini-yt-video-summarizer-AI-p`
-3. Run the summarizer: `python main.py [YouTube video URL]`
-
-> **Note:** Add any additional usage instructions or considerations specific to your project.
+3. Run the summarizer: `streamlit run app.py`
 
 ## Contributing
 
 Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
@@ -68,5 +62,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries, please contact [Your Name](https://github.com/YOUR_GITHUB_USERNAME).
+For any inquiries, please contact [Siddharth Kamble](https://github.com/siddharthsky).
 
