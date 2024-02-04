@@ -66,5 +66,5 @@ Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for m
 
 ## Acknowledgments
 
-- [Google Gemini API](https://example.com/gemini-api) 
+- [Google Gemini API](https://ai.google.dev/) 
 - [Krish Naik](https://www.youtube.com/user/krishnaik06) 
