@@ -75,7 +75,7 @@ streamlit run app.py
 
 ## Contributing
 
-Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+Contributions are welcome! 
 
 ## Acknowledgments
 
