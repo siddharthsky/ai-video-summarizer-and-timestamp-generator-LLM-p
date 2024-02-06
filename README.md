@@ -14,7 +14,7 @@
   <a href="YOUR_CONTRIBUTION_GUIDELINES">
     <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg">
   </a>
-  <a href="LICENSE_URL">
+  <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg">
   </a>
 </p>
