@@ -19,14 +19,23 @@ class GetVideo():
         
     def transcript(link):
         video_id=GetVideo.Id(link)
-        
         try:
             transcript_dict=YouTubeTranscriptApi.get_transcript(video_id)
             final_transcript = ""
             for i in transcript_dict:
                 final_transcript += " " + i["text"]
             return final_transcript
+        except Exception as e:
+            print(e)
+
+    def transcript_time(link):
+        video_id=GetVideo.Id(link)
+        
+        try:
+            transcript_dict=YouTubeTranscriptApi.get_transcript(video_id)
+            transcript_dict = f"{transcript_dict}"
+            return transcript_dict
     
         except Exception as e:
             print(e)
-    
+   
