@@ -13,6 +13,9 @@ prompt01 = Prompt.prompt1()
 prompt_time = Prompt.prompt1(ID='0t')
 
 def Homepage():
+    st.set_page_config( page_title="AI Video Summarizer", 
+                        page_icon="chart_with_upwards_trend")
+    
     st.title("AI Video Summarizer")
 
     youtube_url = st.text_input("Enter YouTube Video Link")
@@ -52,7 +55,7 @@ def Homepage():
     else:
         if st.button("**Get Timestamps**"):
             try:
-                TimeStamps = Model.google_gemini(video_transcript_time,prompt_time)
+                TimeStamps = Model.google_gemini(video_transcript_time,prompt_time,extra=youtube_url)
             except UnboundLocalError as err:
                 st.write(f"Please enter the :rainbow[**YouTube Video**] link")
                 st.stop()
