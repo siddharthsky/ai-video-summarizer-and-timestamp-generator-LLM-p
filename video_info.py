@@ -33,9 +33,18 @@ class GetVideo():
         
         try:
             transcript_dict=YouTubeTranscriptApi.get_transcript(video_id)
-            transcript_dict = f"{transcript_dict}"
-            return transcript_dict
-    
+            final_transcript = ""
+            for i in transcript_dict:
+                final_transcript += " " + i["text"]
+                timevar = round(float(i["start"]))
+                hours = int(timevar // 3600)
+                timevar %= 3600
+                minutes = int(timevar // 60)
+                timevar %= 60
+                timevex = f"{hours:02d}:{minutes:02d}:{timevar:02d}"
+                final_transcript += f' "time:{timevex}"'
+            return str(final_transcript)
+
         except Exception as e:
             print(e)
    
