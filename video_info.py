@@ -1,6 +1,7 @@
 from youtube_transcript_api import YouTubeTranscriptApi 
 from bs4 import BeautifulSoup
 import requests
+import re
 
 
 class GetVideo():
@@ -8,8 +9,19 @@ class GetVideo():
         pass
 
     def Id(link):
-        video_id = link.split("=")[1]
-        return video_id
+        #video_id = link.split("=")[1]
+        if "youtube.com" in link:
+            pattern = r'youtube\.com/watch\?v=([a-zA-Z0-9_-]+)'
+            video_id = re.search(pattern, link).group(1)
+            return video_id
+        elif "youtu.be"in link:
+            pattern = r"youtu\.be/([a-zA-Z0-9_-]+)"
+            video_id = re.search(pattern, link).group(1)
+            return video_id
+        else:
+            video_id = None
+            return video_id
+
         
     def title(link):
         r = requests.get(link) 
@@ -47,4 +59,5 @@ class GetVideo():
 
         except Exception as e:
             print(e)
-   
+            return video_id
+            
