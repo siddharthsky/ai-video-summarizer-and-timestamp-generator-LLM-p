@@ -10,8 +10,21 @@ class Prompt():
             Use the given text as the basis for your summary : """
         
         elif ID == "0t":
-            prompt_text = """Generate timestamps for the main topics discussed in the YouTube video transcript [ONLY THE MAIN TOPICS WHICH ARE DISCUSSED PROMINENTLY]. 
-            The transcript is provided in the following format: [{'text': 'sponsored by T', 'start': 0.68, 'duration': 3.24}], where 'text' represents the dialog text, 'start' indicates the time in milliseconds from the video start, and 'duration' specifies how long the subtitle was displayed on screen. Please provide the output in seconds and label each topic with a timestamp in the format '00:01:15 EXAMPLE' representing the time when the topic is discussed in the video."""
+            prompt_text = """
+            Generate timestamps for the main chapter/topics discussed in a YouTube video transcript.
+
+            Given a list of text segments along with their time. Generate timestamps for the main topics discussed in the video. 
+            You should format the timestamps as [hh:mm:ss](%VIDEO_URL?t=seconds).
+
+            Ensure the topics are clear and concise, and aim for 5-7 main topics within the specified video transcript.(mention only topics titles and timestamps)
+            give the list of topics with time stamps
+            markdown for output 
+            "example :  1. [hh:mm:ss](%VIDEO_URL?t=seconds) %TOPIC TITLE 1%
+                        2. [hh:mm:ss](%VIDEO_URL?t=seconds) %TOPIC TITLE 2%
+                        -and so on" make time clickable
+
+            The %VIDEO_URL% (yotube video link) and transcript are given below.        
+            """
 
         else:
             prompt_text = "NA" 
