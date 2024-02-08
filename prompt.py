@@ -1,7 +1,5 @@
-class Prompt():
-    def __init__():
-        pass
-
+class Prompt:
+    @staticmethod
     def prompt1(ID=0):
         if ID == 0:
             prompt_text = """Your job as an AI video summarizer is to create a short summary of the given video transcript. You need to condense the information into 250 words or less and focus on the important points. Make sure your summary is interesting and informative, highlighting the key insights and notable aspects discussed in the video. Use the provided text as the basis for your summary, and aim to engage the audience by presenting the information in a clear and easy-to-understand way.
