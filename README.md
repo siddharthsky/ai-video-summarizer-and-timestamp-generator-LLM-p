@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p"><img src="https://raw.githubusercontent.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/main/research/demo2.gif" ></a>
+  <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p"><img src="https://raw.githubusercontent.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/main/research/demo2.gif" width="600" ></a>
 </p>
 
 
