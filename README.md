@@ -11,9 +11,7 @@
 <p align="center">
   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/issues"><img src="https://img.shields.io/github/issues/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a>
   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/stargazers"><img src="https://img.shields.io/github/stars/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a>
-  <a href="YOUR_CONTRIBUTION_GUIDELINES">
-    <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg">
-  </a>
+
   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg">
   </a>
