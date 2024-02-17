@@ -1,5 +1,6 @@
 streamlit
 google-generativeai
+openai
 youtube_transcript_api
 python-dotenv
 beautifulsoup4
