@@ -29,7 +29,7 @@ class AIVideoSummarizer:
     def generate_summary(self):
         if st.button(":rainbow[**Get Summary**]"):
             self.video_transcript = GetVideo.transcript(self.youtube_url)
-            self.summary = Model.google_gemini(self.video_transcript, Prompt.prompt1())
+            self.summary = Model.openai_chatgpt(self.video_transcript, Prompt.prompt1())
             st.markdown("## Summary:")
             st.write(self.summary)
 
@@ -37,7 +37,7 @@ class AIVideoSummarizer:
         if st.button(":rainbow[**Get Timestamps**]"):
             self.video_transcript_time = GetVideo.transcript_time(self.youtube_url)
             youtube_url_full = f"https://youtube.com/watch?v={self.video_id}"
-            self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
+            self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
 
