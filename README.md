@@ -9,7 +9,7 @@
 <h4 align="center">A powerful YouTube video summarizer using Google Gemini AI model</h4>
 
 <p align="center">
-<!--###   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/issues"><img src="https://img.shields.io/github/issues/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a> -->
+  <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/issues"><img src="https://img.shields.io/github/issues/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a> 
   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/stargazers"><img src="https://img.shields.io/github/stars/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a>
 
   <a href="https://github.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/blob/main/LICENSE">
