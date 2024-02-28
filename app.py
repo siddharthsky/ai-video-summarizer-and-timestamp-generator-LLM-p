@@ -1,7 +1,7 @@
 import streamlit as st
-from video_info import GetVideo
-from model import Model
-from prompt import Prompt
+from pipeline.video_info import GetVideo
+from pipeline.model import Model
+from pipeline.prompt import Prompt
 
 class AIVideoSummarizer:
     def __init__(self):
