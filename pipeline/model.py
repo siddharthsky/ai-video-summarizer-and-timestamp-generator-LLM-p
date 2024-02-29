@@ -14,6 +14,7 @@ class Model:
         model = genai.GenerativeModel("gemini-pro")
         response = model.generate_content(prompt + extra + transcript)
         return response.text
+
     
     @staticmethod
     def openai_chatgpt(transcript, prompt, extra=""):
@@ -23,3 +24,4 @@ class Model:
         message = [{"role": "system", "content": prompt + extra + transcript}]
         response = client.chat.completions.create(model=model, messages=message)
         return response.choices[0].message.content
+
