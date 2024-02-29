@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 from pipeline.video_info import GetVideo
 from pipeline.model import Model
 from pipeline.prompt import Prompt
@@ -13,9 +14,21 @@ class AIVideoSummarizer:
         self.summary = None
         self.time_stamps = None
         self.transcript = None
+        self.model_name = None
 
     def get_youtube_info(self):
         self.youtube_url = st.text_input("Enter YouTube Video Link")
+        self.model_name = st.selectbox(
+            'Select the model',
+            ('Gemini', 'ChatGPT'))
+        def switch (model_name):
+            if model_name == "Gemini":
+                st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
+            elif model_name == "ChatGPT":
+                st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_column_width=True)
+        
+        switch(self.model_name)
+
         if self.youtube_url:
             self.video_id = GetVideo.Id(self.youtube_url)
             if self.video_id is None:
@@ -29,7 +42,10 @@ class AIVideoSummarizer:
     def generate_summary(self):
         if st.button(":rainbow[**Get Summary**]"):
             self.video_transcript = GetVideo.transcript(self.youtube_url)
-            self.summary = Model.google_gemini(self.video_transcript, Prompt.prompt1())
+            if self.model_name == "Gemini":
+                self.summary = Model.google_gemini(self.video_transcript, Prompt.prompt1())
+            elif self.model_name == "ChatGPT":
+                self.summary = Model.openai_chatgpt(self.video_transcript, Prompt.prompt1())
             st.markdown("## Summary:")
             st.write(self.summary)
 
@@ -37,7 +53,10 @@ class AIVideoSummarizer:
         if st.button(":rainbow[**Get Timestamps**]"):
             self.video_transcript_time = GetVideo.transcript_time(self.youtube_url)
             youtube_url_full = f"https://youtube.com/watch?v={self.video_id}"
-            self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
+            if self.model_name == "Gemini":
+                self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
+            elif self.model_name == "ChatGPT":
+                self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
 
@@ -51,17 +70,24 @@ class AIVideoSummarizer:
         st.set_page_config(page_title="AI Video Summarizer", page_icon="chart_with_upwards_trend")
         st.title("AI Video Summarizer")
         self.get_youtube_info()
-        genre = st.radio(
+
+        n = random.randint(0,2) 
+        loader = ["Wait for it...","AI is brewing your content potion...","The AI is working its magic..."]
+
+        mode = st.radio(
             "What do you want to generate for this video?",
             [":rainbow[**AI Summary**]", ":rainbow[**AI Timestamps**]", "**Transcript**"],
-            index=0
-        )
-        if genre == ":rainbow[**AI Summary**]":
-            self.generate_summary()
-        elif genre == ":rainbow[**AI Timestamps**]":
-            self.generate_time_stamps()
+            index=0)
+        if mode == ":rainbow[**AI Summary**]":
+            with st.spinner(loader[n]):
+                self.generate_summary()
+
+        elif mode == ":rainbow[**AI Timestamps**]":
+            with st.spinner(loader[n]):
+                self.generate_time_stamps()
         else:
-            self.generate_transcript()
+            with st.spinner(loader[0]):
+                self.generate_transcript()
 
 if __name__ == "__main__":
     app = AIVideoSummarizer()
