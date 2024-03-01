@@ -62,8 +62,9 @@ class AIVideoSummarizer:
 
     def generate_transcript(self):
         if st.button("Get Transcript"):
+            self.video_transcript = GetVideo.transcript(self.youtube_url)
             self.transcript = self.video_transcript
-            st.markdown("## Transcript:")
+            st.markdown("## Transcript:") 
             st.write(self.transcript)
 
     def run(self):
