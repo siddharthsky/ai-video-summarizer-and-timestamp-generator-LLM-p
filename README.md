@@ -19,7 +19,7 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#features">Features</a> •
-  <a href="#getting-started">Getting Started</a> •
+  <a href="#getting-started 🚀">Getting Started</a> •
   <a href="#contributing">Contributing</a> 
  
 </p>
@@ -43,7 +43,7 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 - Option for users to select AI models like *ChatGPT* or *Gemini* for summarization.
 - Efficiently summarizes videos, reducing viewing time while preserving essential information.
 
-## Getting Started
+## Getting Started 🚀
 
 ### Prerequisites
 
