@@ -48,7 +48,7 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 ### Prerequisites
 
 - Python 3.10
-- Install required dependencies: `pip install -r requirements.txt`
+- LLM Model API Keys [[🔑]](https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/edit/main/README.md#get-api-keys)
 
 ### Usage
 
@@ -70,7 +70,7 @@ GOOGLE_GEMINI_API_KEY = "Your-Gemini-Key-Here"
 OPENAI_CHATPGPT_API_KEY = "Your-Openai-Key-Here"
 ```
 
-Get API Keys:
+### Get API Keys:
 
 - [Google Gemini API key](https://makersuite.google.com/app/apikey) 🔑 
    
