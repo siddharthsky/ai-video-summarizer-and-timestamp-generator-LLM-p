@@ -48,7 +48,7 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 ### Prerequisites
 
 - Python 3.10
-- LLM Model API Keys [[🔑]](https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/edit/main/README.md#get-api-keys)
+- LLM Model API Keys [[🔑]](https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/tree/main?tab=readme-ov-file#get-api-keys)
 
 ### Usage
 
