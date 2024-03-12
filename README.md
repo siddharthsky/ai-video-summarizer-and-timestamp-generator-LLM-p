@@ -2,7 +2,7 @@
   <br>
   <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp"><img src="https://i.imgur.com/Jk1wxO3.png" alt="AI YouTube Video Summarizer" width="200"></a>
   <br>
-   🎥 VidSummarizeAI
+   🎥 AI Video Summarization & Timestamp Generator
   <br>
 </h1>
 
