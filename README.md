@@ -39,8 +39,9 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 
 ## Features
 
-- Automatic extraction of key insights from YouTube videos.
-- Utilizes Google Gemini API for enhanced video analysis.
+- Automatic extraction of key insights and timestamps from YouTube videos.
+- Utilizes youtube-transcript-api for getting the transcripts/subtitles YouTube video.
+- Option for users to select AI models like *ChatGPT* or *Gemini* for summarization.
 - Efficiently summarizes videos, reducing viewing time while preserving essential information.
 
 ## Getting Started
