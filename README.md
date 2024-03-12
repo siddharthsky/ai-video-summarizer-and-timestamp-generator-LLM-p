@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp"><img src="https://i.imgur.com/Jk1wxO3.png" alt="AI YouTube Video Summarizer" width="200"></a>
+  <a href="https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p"><img src="https://i.imgur.com/Jk1wxO3.png" alt="AI YouTube Video Summarizer" width="200"></a>
   <br>
    🎥 AI Video Summarization & Timestamp Generator
   <br>
@@ -9,9 +9,9 @@
 <h4 align="center">Harnessing the Power of LLMs for Enhanced Video Understanding</h4>
 
 <p align="center">
-  <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp/issues"><img src="https://img.shields.io/github/issues/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a> 
-  <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp/stargazers"><img src="https://img.shields.io/github/stars/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a>
-  <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp/blob/main/LICENSE">
+  <a href="https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/issues"><img src="https://img.shields.io/github/issues/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a> 
+  <a href="https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/stargazers"><img src="https://img.shields.io/github/stars/siddharthsky/google-gemini-yt-video-summarizer-AI-p"></a>
+  <a href="https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg">
   </a>
 </p>
@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/siddharthsky/ai-video-summarizer-timestamp"><img src="https://raw.githubusercontent.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/main/research/demo2.gif" ></a>
+  <a href="https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p"><img src="https://raw.githubusercontent.com/siddharthsky/google-gemini-yt-video-summarizer-AI-p/main/research/demo2.gif" ></a>
 </p>
 
 
@@ -54,7 +54,7 @@ This project is an AI-powered video summarizer designed specifically for YouTube
 
 1. Clone the repository:
 ```
-git clone https://github.com/siddharthsky/ai-video-summarizer-timestamp.git
+git clone https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-generator-LLM-p.git
 ```
 2. Navigate to the project directory:
 ```
