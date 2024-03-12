@@ -19,7 +19,7 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#features">Features</a> •
-  <a href="#getting-started-🚀">Getting Started</a> •
+  <a href="#Getting Started 🚀">Getting Started</a> •
   <a href="#contributing">Contributing</a> 
  
 </p>
