@@ -71,14 +71,20 @@ GOOGLE_GEMINI_API_KEY = "Your-Gemini-Key-Here"
 OPENAI_CHATPGPT_API_KEY = "Your-Openai-Key-Here"
 ```
 
-🔑 [Google Gemini API key](https://makersuite.google.com/app/apikey)
+Get API Keys:
+
+- [Google Gemini API key](https://makersuite.google.com/app/apikey) 🔑 
    
-🔑 [OpenAI ChatGPT API key](https://platform.openai.com/signup)
+- [OpenAI ChatGPT API key](https://platform.openai.com/signup) 🔑 
    
 
-5. Run the summarizer:
+5 Run the summarizer:
 ```
 streamlit run app.py
+```
+6 Or you can run Run the in column layout:
+```
+streamlit run app-col-ui.py
 ```
 
 ## Contributing
