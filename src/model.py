@@ -19,7 +19,7 @@ class Model:
     @staticmethod
     def openai_chatgpt(transcript, prompt, extra=""):
         load_dotenv()
-        client =   OpenAI(api_key=os.getenv("OPENAI_CHATPGPT_API_KEY2"))
+        client =   OpenAI(api_key=os.getenv("OPENAI_CHATPGPT_API_KEY"))
         model="gpt-3.5-turbo"
         message = [{"role": "system", "content": prompt + extra + transcript}]
         response = client.chat.completions.create(model=model, messages=message)
