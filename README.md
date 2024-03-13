@@ -95,3 +95,13 @@ Contributions are welcome from the community!, Whether it's feedback, suggestion
 - [Google Gemini](https://ai.google.dev/)
 - [OpenAI ChatGPT](https://help.openai.com/en/) 
 - [Krish Naik](https://www.youtube.com/user/krishnaik06) 
+
+│   └───__pycache__
+│   │   │   │   │   ├───types
+│   │   │   │   │   │   └───__pycache__
+│   │   │   │   │   ├───typing
+│   │   │   │   │   │   └───__pycache__
+│   │   │   │   │   └───__pycache__
+│   │   │   │   ├───arrays
+│   │   │   │   │   └───__pycache__
+│   │   │   │   ├───compat
