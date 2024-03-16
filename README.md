@@ -21,7 +21,6 @@
   <a href="#features-">Features</a> •
   <a href="#getting-started-">Getting Started</a> •
   <a href="#contributing">Contributing</a> 
- 
 </p>
 
 <p align="center">
