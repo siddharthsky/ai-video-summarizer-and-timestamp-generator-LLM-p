@@ -76,13 +76,13 @@ OPENAI_CHATPGPT_API_KEY = "Your-Openai-Key-Here"
 - [OpenAI ChatGPT API key](https://platform.openai.com/signup) 🔑 
    
 
-5 Run the summarizer:
+5 Run the summarizer [ColumnUI:default]:
 ```
 streamlit run app.py
 ```
-6 Alternatively, run the summarizer in a column layout:
+6 Alternatively, you can try the summarizer in a stacked layout:
 ```
-streamlit run app-col-ui.py
+streamlit run app-stacked-ui.py
 ```
 
 ## Contributing
