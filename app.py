@@ -1,8 +1,10 @@
 import streamlit as st
 import random
+import os
 from src.video_info import GetVideo
 from src.model import Model
 from src.prompt import Prompt
+from dotenv import load_dotenv
 
 class AIVideoSummarizer:
     def __init__(self):
@@ -15,12 +17,22 @@ class AIVideoSummarizer:
         self.time_stamps = None
         self.transcript = None
         self.model_name = None
+        self.model_env_checker = []
 
     def get_youtube_info(self):
         self.youtube_url = st.text_input("Enter YouTube Video Link")
+
+        if os.getenv("GOOGLE_GEMINI_API_KEY"):
+            self.model_env_checker.append("Gemini") 
+        if os.getenv("OPENAI_CHATPGPT_API_KEY"):
+            self.model_env_checker.append("ChatGPT") 
+        elif self.model_env_checker == []:
+            st.warning('Error while loading the API keys from environment.', icon="⚠️")
+
+
         self.model_name = st.selectbox(
             'Select the model',
-            ('Gemini', 'ChatGPT'))
+            self.model_env_checker)
         def switch (model_name):
             if model_name == "Gemini":
                 st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
