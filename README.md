@@ -76,7 +76,7 @@ OPENAI_CHATPGPT_API_KEY = "Your-Openai-Key-Here"
 - [OpenAI ChatGPT API key](https://platform.openai.com/signup) 🔑 
    
 
-5 Run the summarizer [ColumnUI:default]:
+5 Run the summarizer [default=ColumnUI]:
 ```
 streamlit run app.py
 ```
