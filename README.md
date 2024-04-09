@@ -87,7 +87,7 @@ streamlit run app-stacked-ui.py
 
 ## Contributing
 
-Contributions are welcome from the community!, Whether it's feedback, suggestions, or code improvements, your input is valuable to us. 
+Contributions are welcome from the community!, Whether it's feedback, suggestions, or code improvements, your input is valuable. 
 
 ## Acknowledgments
 
