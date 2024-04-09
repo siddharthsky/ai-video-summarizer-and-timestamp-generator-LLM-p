@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Research related files
+apivalidator.py
+gemini_playground.py
+openai_playground.py
+
 # Distribution / packaging
 .Python
 build/
