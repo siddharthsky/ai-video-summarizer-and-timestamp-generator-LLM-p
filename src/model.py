@@ -12,9 +12,13 @@ class Model:
         load_dotenv()
         genai.configure(api_key=os.getenv("GOOGLE_GEMINI_API_KEY"))
         model = genai.GenerativeModel("gemini-pro")
-        response = model.generate_content(prompt + extra + transcript)
-        return response.text
-
+        try:
+            response = model.generate_content(prompt + extra + transcript)
+            return response.text
+        except Exception as e:
+            response_error = "⚠️ There is a problem with the API key or with python module."
+            return response_error,e
+    
     
     @staticmethod
     def openai_chatgpt(transcript, prompt, extra=""):
@@ -23,5 +27,9 @@ class Model:
         model="gpt-3.5-turbo"
         message = [{"role": "system", "content": prompt + extra + transcript}]
         response = client.chat.completions.create(model=model, messages=message)
-        return response.choices[0].message.content
-
+        try:
+            response = client.chat.completions.create(model=model, messages=message)
+            return response.text
+        except Exception as e:
+            response_error = "⚠️ There is a problem with the API key or with python module."
+            return response_error,e

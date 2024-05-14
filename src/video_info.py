@@ -23,9 +23,13 @@ class GetVideo:
         """Gets the title of a YouTube video."""
         r = requests.get(link) 
         s = BeautifulSoup(r.text, "html.parser") 
-        title = s.find("meta", itemprop="name")["content"]
-        return title
-
+        try:
+            title = s.find("meta", itemprop="name")["content"]
+            return title
+        except TypeError:
+            title = "⚠️ There seems to be an issue with the YouTube video link provided. Please check the link and try again."
+            return title
+        
     @staticmethod
     def transcript(link):
         """Gets the transcript of a YouTube video."""

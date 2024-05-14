@@ -59,9 +59,9 @@ class AIVideoSummarizer:
         if st.button(":rainbow[**Get Summary**]"):
             self.video_transcript = GetVideo.transcript(self.youtube_url)
             if self.model_name == "Gemini":
-                self.summary = Model.google_gemini(self.video_transcript, Prompt.prompt1())
+                self.summary = Model.google_gemini(transcript=self.video_transcript, prompt=Prompt.prompt1())
             elif self.model_name == "ChatGPT":
-                self.summary = Model.openai_chatgpt(self.video_transcript, Prompt.prompt1())
+                self.summary = Model.openai_chatgpt(transcript=self.video_transcript, prompt=Prompt.prompt1())
             st.markdown("## Summary:")
             st.write(self.summary)
 
