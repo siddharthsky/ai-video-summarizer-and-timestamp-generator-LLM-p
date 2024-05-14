@@ -10,6 +10,8 @@ __pycache__/
 apivalidator.py
 gemini_playground.py
 openai_playground.py
+gemini_playground.ipynb
+openai_playground.ipynb
 
 # Distribution / packaging
 .Python
