@@ -4,7 +4,9 @@ import os
 from src.video_info import GetVideo
 from src.model import Model
 from src.prompt import Prompt
+from src.copy_module_edit import ModuleEditor
 from dotenv import load_dotenv
+from st_copy_to_clipboard import st_copy_to_clipboard
 
 class AIVideoSummarizer:
     def __init__(self):
@@ -64,6 +66,7 @@ class AIVideoSummarizer:
                 self.summary = Model.openai_chatgpt(transcript=self.video_transcript, prompt=Prompt.prompt1())
             st.markdown("## Summary:")
             st.write(self.summary)
+            st_copy_to_clipboard(self.summary)
 
     def generate_time_stamps(self):
         if st.button(":rainbow[**Get Timestamps**]"):
@@ -75,6 +78,8 @@ class AIVideoSummarizer:
                 self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
+            st_copy_to_clipboard(self.time_stamps)
+            
 
     def generate_transcript(self):
         if st.button("Get Transcript"):
@@ -82,10 +87,13 @@ class AIVideoSummarizer:
             self.transcript = self.video_transcript
             st.markdown("## Transcript:") 
             st.write(self.transcript)
+            st_copy_to_clipboard(self.transcript)
 
     def run(self):
         st.set_page_config(page_title="AI Video Summarizer", page_icon="chart_with_upwards_trend", layout="wide")
         st.title("AI Video Summarizer")
+        editor = ModuleEditor('st_copy_to_clipboard')
+        editor.modify_frontend_files()
         
         
         self.col1, self.col2, self.col3 = st.columns(3)
@@ -94,7 +102,7 @@ class AIVideoSummarizer:
             self.get_youtube_info()
 
         n = random.randint(0,2) 
-        loader = ["Wait for it...","AI is brewing your content potion...","The AI is working its magic..."]
+        loader = ["🔄 Loading... Hold on tight!","⏳ AI is brewing your content potion...","🌟 The AI is working its magic...","🤖 Processing your request... AI at work!",]
 
         with self.col3:
             mode = st.radio(
