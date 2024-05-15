@@ -4,6 +4,7 @@ import os
 from src.video_info import GetVideo
 from src.model import Model
 from src.prompt import Prompt
+from src.copy_module_edit import ModuleEditor
 from dotenv import load_dotenv
 from st_copy_to_clipboard import st_copy_to_clipboard
 
@@ -91,6 +92,8 @@ class AIVideoSummarizer:
     def run(self):
         st.set_page_config(page_title="AI Video Summarizer", page_icon="chart_with_upwards_trend", layout="wide")
         st.title("AI Video Summarizer")
+        editor = ModuleEditor('st_copy_to_clipboard')
+        editor.modify_frontend_files()
         
         
         self.col1, self.col2, self.col3 = st.columns(3)
