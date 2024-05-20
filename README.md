@@ -57,7 +57,7 @@ git clone https://github.com/siddharthsky/ai-video-summarizer-and-timestamp-gene
 ```
 2. Navigate to the project directory:
 ```
-cd google-gemini-yt-video-summarizer-AI-p
+cd ai-video-summarizer-and-timestamp-generator-LLM-p
 ```
 3. Install dependencies:
 ```
