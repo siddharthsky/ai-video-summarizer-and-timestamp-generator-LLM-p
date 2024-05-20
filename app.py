@@ -30,7 +30,7 @@ class AIVideoSummarizer:
 
         if os.getenv("GOOGLE_GEMINI_API_KEY"):
             self.model_env_checker.append("Gemini") 
-        if os.getenv("OPENAI_CHATPGPT_API_KEY"):
+        if os.getenv("OPENAI_CHATGPT_API_KEY"):
             self.model_env_checker.append("ChatGPT") 
         elif self.model_env_checker == []:
             st.warning('Error while loading the API keys from environment.', icon="⚠️")
