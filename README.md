@@ -66,7 +66,7 @@ pip install -r requirements.txt
 4. Create a ".env" file ⬇️ [add whichever is available]
 ```
 GOOGLE_GEMINI_API_KEY = "Your-Gemini-Key-Here"
-OPENAI_CHATPGPT_API_KEY = "Your-Openai-Key-Here"
+OPENAI_CHATGPT_API_KEY = "Your-Openai-Key-Here"
 ```
 
 ### Get API Keys:
