@@ -86,6 +86,7 @@ class AIVideoSummarizer:
             self.video_transcript = GetVideo.transcript(self.youtube_url)
             self.transcript = self.video_transcript
             st.markdown("## Transcript:") 
+            st.download_button(label="Download as text file", data=self.transcript, file_name=f"Transcript - {self.video_title}")
             st.write(self.transcript)
             st_copy_to_clipboard(self.transcript)
 
