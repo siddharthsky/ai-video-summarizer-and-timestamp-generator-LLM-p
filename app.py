@@ -4,6 +4,8 @@ import os
 from src.video_info import GetVideo
 from src.model import Model
 from src.prompt import Prompt
+from src.misc import Misc
+from src.timestamp_formatter import TimestampFormatter
 from src.copy_module_edit import ModuleEditor
 from dotenv import load_dotenv
 from st_copy_to_clipboard import st_copy_to_clipboard
@@ -78,7 +80,9 @@ class AIVideoSummarizer:
                 self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
-            st_copy_to_clipboard(self.time_stamps)
+            cp_text=TimestampFormatter.format(self.time_stamps)
+            st_copy_to_clipboard(cp_text)
+
             
 
     def generate_transcript(self):
@@ -102,8 +106,8 @@ class AIVideoSummarizer:
         with self.col1:
             self.get_youtube_info()
 
-        n = random.randint(0,2) 
-        loader = ["🔄 Loading... Hold on tight!","⏳ AI is brewing your content potion...","🌟 The AI is working its magic...","🤖 Processing your request... AI at work!",]
+        ran_loader=Misc.loaderx() 
+        n, loader = ran_loader[0],ran_loader[1]
 
         with self.col3:
             mode = st.radio(
@@ -121,51 +125,8 @@ class AIVideoSummarizer:
                 with st.spinner(loader[0]):
                     self.generate_transcript()
 
-        ft = """
-        <style>
-        a:link , a:visited{
-        color: #BFBFBF;  /* theme's text color hex code at 75 percent brightness*/
-        background-color: transparent;
-        text-decoration: none;
-        }
-
-        a:hover,  a:active {
-        color: #0283C3; /* theme's primary color*/
-        background-color: transparent;
-        text-decoration: underline;
-        }
-
-        #page-container {
-        position: relative;
-        min-height: 10vh;
-        }
-
-        footer{
-            visibility:hidden;
-        }
-
-        .footer {
-        position: relative;
-        left: 0;
-        top:-25px;
-        bottom: 0;
-        width: 100%;
-        background-color: transparent;
-        color: #808080; /* theme's text color hex code at 50 percent brightness*/
-        text-align: left; /* you can replace 'left' with 'center' or 'right' if you want*/
-        }
-        </style>
-
-        <div id="page-container">
-
-        <div class="footer">
-        <p style='font-size: 0.875em;'><a style='display: inline; text-align: left;'></a><br 'style= top:3px;'>
-        By <a style='display: inline; text-align: left;' href="https://github.com/SiddharthSky" target="_blank">SiddharthSky⚡</a></p>
-        </div>
-
-        </div>
-        """
-        st.write(ft, unsafe_allow_html=True)
+        
+        st.write(Misc.footer(), unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
