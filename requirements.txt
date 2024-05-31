@@ -5,3 +5,4 @@ youtube_transcript_api
 python-dotenv
 beautifulsoup4
 st-copy-to-clipboard
+strip-markdown
