@@ -75,9 +75,9 @@ class AIVideoSummarizer:
             self.video_transcript_time = GetVideo.transcript_time(self.youtube_url)
             youtube_url_full = f"https://youtube.com/watch?v={self.video_id}"
             if self.model_name == "Gemini":
-                self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
+                self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='timestamp'), extra=youtube_url_full)
             elif self.model_name == "ChatGPT":
-                self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='transcript'), extra=youtube_url_full)
+                self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='timestamp'), extra=youtube_url_full)
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
             cp_text=TimestampFormatter.format(self.time_stamps)
