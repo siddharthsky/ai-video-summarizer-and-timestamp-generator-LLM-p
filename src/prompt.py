@@ -53,7 +53,7 @@ By following these guidelines, you can effectively transform video transcripts i
             The %VIDEO_URL% (YouTube video link) and transcript are provided below :
             """
             
-         elif ID == "transcript":
+        elif ID == "transcript":
             prompt_text = """
             """
 
