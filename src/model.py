@@ -26,7 +26,6 @@ class Model:
         client =   OpenAI(api_key=os.getenv("OPENAI_CHATGPT_API_KEY"))
         model="gpt-3.5-turbo"
         message = [{"role": "system", "content": prompt + extra + transcript}]
-        response = client.chat.completions.create(model=model, messages=message)
         try:
             response = client.chat.completions.create(model=model, messages=message)
             return response.text
