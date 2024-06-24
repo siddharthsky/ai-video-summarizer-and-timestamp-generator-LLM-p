@@ -1,5 +1,4 @@
 import streamlit as st
-import random
 import os
 from src.video_info import GetVideo
 from src.model import Model
