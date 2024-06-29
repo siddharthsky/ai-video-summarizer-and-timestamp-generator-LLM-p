@@ -33,20 +33,24 @@ class AIVideoSummarizer:
             self.model_env_checker.append("Gemini") 
         if os.getenv("OPENAI_CHATGPT_API_KEY"):
             self.model_env_checker.append("ChatGPT") 
-        elif self.model_env_checker == []:
+        if not self.model_env_checker:
             st.warning('Error while loading the API keys from environment.', icon="⚠️")
 
+
         with self.col2:
-            self.model_name = st.selectbox(
-                'Select the model',
-                self.model_env_checker)
-            def switch (model_name):
-                if model_name == "Gemini":
-                    st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
-                elif model_name == "ChatGPT":
-                    st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_column_width=True)
-            
-            switch(self.model_name)
+             if self.model_env_checker:
+                with st.container():
+                    self.model_name = st.selectbox(
+                        'Select the model',
+                        self.model_env_checker)
+
+                    def switch(model_name):
+                        if model_name == "Gemini":
+                            st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
+                        elif model_name == "ChatGPT":
+                            st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_column_width=True)
+
+                    switch(self.model_name)
 
         if self.youtube_url:
             self.video_id = GetVideo.Id(self.youtube_url)
