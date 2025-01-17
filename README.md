@@ -57,7 +57,7 @@ git clone https://github.com/CheBooRek/ai_video_summarizer.git
 ```
 2. Navigate to the project directory:
 ```
-cd ai-video-summarizer-and-timestamp-generator-LLM-p
+cd ai_video_summarizer
 ```
 3. Install dependencies:
 ```
