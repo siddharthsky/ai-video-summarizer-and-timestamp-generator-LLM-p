@@ -31,22 +31,22 @@ class GetVideo:
             return title
         
     @staticmethod
-    def transcript(link):
+    def transcript(link, languages=('ru', 'en',)):
         """Gets the transcript of a YouTube video."""
         video_id = GetVideo.Id(link)
         try:
-            transcript_dict = YouTubeTranscriptApi.get_transcript(video_id)
+            transcript_dict = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
             final_transcript = " ".join(i["text"] for i in transcript_dict)
             return final_transcript
         except Exception as e:
             print(e)
 
     @staticmethod
-    def transcript_time(link):
+    def transcript_time(link, languages=('ru', 'en',)):
         """Gets the transcript of a YouTube video with timestamps."""
         video_id = GetVideo.Id(link)
         try:
-            transcript_dict = YouTubeTranscriptApi.get_transcript(video_id)
+            transcript_dict = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
             final_transcript = ""
             for i in transcript_dict:
                 timevar = round(float(i["start"]))

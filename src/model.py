@@ -17,18 +17,18 @@ class Model:
             return response.text
         except Exception as e:
             response_error = "⚠️ There is a problem with the API key or with python module."
-            return response_error,e
+            return response_error, e
     
     
     @staticmethod
-    def openai_chatgpt(transcript, prompt, extra=""):
+    def openai_chatgpt(transcript, prompt, extra="", model="gpt-3.5-turbo"):
         load_dotenv()
-        client =   OpenAI(api_key=os.getenv("OPENAI_CHATGPT_API_KEY"))
-        model="gpt-3.5-turbo"
+        client = OpenAI(api_key=os.getenv("OPENAI_CHATGPT_API_KEY"))
         message = [{"role": "system", "content": prompt + extra + transcript}]
         try:
-            response = client.chat.completions.create(model=model, messages=message)
-            return response.text
+            completion = client.chat.completions.create(model=model, messages=message)
+            text = completion.choices[0].message.content
+            return text
         except Exception as e:
             response_error = "⚠️ There is a problem with the API key or with python module."
-            return response_error,e
+            return response_error, e

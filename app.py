@@ -9,6 +9,7 @@ from src.copy_module_edit import ModuleEditor
 from dotenv import load_dotenv
 from st_copy_to_clipboard import st_copy_to_clipboard
 
+
 class AIVideoSummarizer:
     def __init__(self):
         self.youtube_url = None
@@ -36,7 +37,6 @@ class AIVideoSummarizer:
         if not self.model_env_checker:
             st.warning('Error while loading the API keys from environment.', icon="⚠️")
 
-
         with self.col2:
              if self.model_env_checker:
                 with st.container():
@@ -46,9 +46,9 @@ class AIVideoSummarizer:
 
                     def switch(model_name):
                         if model_name == "Gemini":
-                            st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
+                            st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_container_width=True)
                         elif model_name == "ChatGPT":
-                            st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_column_width=True)
+                            st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_container_width=True)
 
                     switch(self.model_name)
 
@@ -56,11 +56,11 @@ class AIVideoSummarizer:
             self.video_id = GetVideo.Id(self.youtube_url)
             if self.video_id is None:
                 st.write("**Error**")
-                st.image("https://i.imgur.com/KWFtgxB.png", use_column_width=True)
+                st.image("https://i.imgur.com/KWFtgxB.png", use_container_width=True)
                 st.stop()
             self.video_title = GetVideo.title(self.youtube_url)
             st.write(f"**{self.video_title}**")
-            st.image(f"http://img.youtube.com/vi/{self.video_id}/0.jpg", use_column_width=True)
+            st.image(f"http://img.youtube.com/vi/{self.video_id}/0.jpg", use_container_width=True)
 
     def generate_summary(self):
         if st.button(":rainbow[**Get Summary**]"):
@@ -86,8 +86,6 @@ class AIVideoSummarizer:
             cp_text=TimestampFormatter.format(self.time_stamps)
             st_copy_to_clipboard(cp_text)
 
-            
-
     def generate_transcript(self):
         if st.button("Get Transcript"):
             self.video_transcript = GetVideo.transcript(self.youtube_url)
@@ -102,7 +100,6 @@ class AIVideoSummarizer:
         st.title("AI Video Summarizer")
         editor = ModuleEditor('st_copy_to_clipboard')
         editor.modify_frontend_files()
-        
         
         self.col1, self.col2, self.col3 = st.columns(3)
 
@@ -128,7 +125,6 @@ class AIVideoSummarizer:
                 with st.spinner(loader[0]):
                     self.generate_transcript()
 
-        
         st.write(Misc.footer(), unsafe_allow_html=True)
 
 

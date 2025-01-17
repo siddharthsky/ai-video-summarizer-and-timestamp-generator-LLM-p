@@ -5,7 +5,7 @@ class Misc:
     def loaderx():
         n = random.randint(0,2) 
         loader = ["🔄 Loading... Hold on tight!","⏳ AI is brewing your content potion...","🌟 The AI is working its magic...","🤖 Processing your request... AI at work!",]
-        return n,loader
+        return n, loader
 
 
     @staticmethod  
@@ -49,7 +49,7 @@ class Misc:
 
         <div class="footer">
         <p style='font-size: 0.875em;'><a style='display: inline; text-align: left;'></a><br 'style= top:3px;'>
-        By <a style='display: inline; text-align: left;' href="https://github.com/SiddharthSky" target="_blank">SiddharthSky⚡</a></p>
+        By <a style='display: inline; text-align: left;' href="https://github.com/CheBooRek" target="_blank">SiddharthSky | CheBooRek⚡</a></p>
         </div>
 
         </div>
